@@ -1,0 +1,194 @@
+Files of Blinky Project:
+├── 01_Blink.ioc
+├── 01_Blink.launch
+├── Core
+│   ├── Inc
+│   │   ├── main.h
+│   │   ├── stm32f3xx_hal_conf.h
+│   │   └── stm32f3xx_it.h
+│   ├── Src
+│   │   ├── main.c
+│   │   ├── stm32f3xx_hal_msp.c
+│   │   ├── stm32f3xx_it.c
+│   │   ├── syscalls.c
+│   │   ├── sysmem.c
+│   │   └── system_stm32f3xx.c
+│   └── Startup
+│       └── startup_stm32f334c8tx.s
+├── Debug
+│   ├── 01_Blink.elf
+│   ├── 01_Blink.list
+│   ├── 01_Blink.map
+│   ├── Core
+│   │   ├── Src
+│   │   │   ├── main.cyclo
+│   │   │   ├── main.d
+│   │   │   ├── main.o
+│   │   │   ├── main.su
+│   │   │   ├── stm32f3xx_hal_msp.cyclo
+│   │   │   ├── stm32f3xx_hal_msp.d
+│   │   │   ├── stm32f3xx_hal_msp.o
+│   │   │   ├── stm32f3xx_hal_msp.su
+│   │   │   ├── stm32f3xx_it.cyclo
+│   │   │   ├── stm32f3xx_it.d
+│   │   │   ├── stm32f3xx_it.o
+│   │   │   ├── stm32f3xx_it.su
+│   │   │   ├── subdir.mk
+│   │   │   ├── syscalls.cyclo
+│   │   │   ├── syscalls.d
+│   │   │   ├── syscalls.o
+│   │   │   ├── syscalls.su
+│   │   │   ├── sysmem.cyclo
+│   │   │   ├── sysmem.d
+│   │   │   ├── sysmem.o
+│   │   │   ├── sysmem.su
+│   │   │   ├── system_stm32f3xx.cyclo
+│   │   │   ├── system_stm32f3xx.d
+│   │   │   ├── system_stm32f3xx.o
+│   │   │   └── system_stm32f3xx.su
+│   │   └── Startup
+│   │       ├── startup_stm32f334c8tx.d
+│   │       ├── startup_stm32f334c8tx.o
+│   │       └── subdir.mk
+│   ├── Drivers
+│   │   └── STM32F3xx_HAL_Driver
+│   │       └── Src
+│   │           ├── stm32f3xx_hal_cortex.cyclo
+│   │           ├── stm32f3xx_hal_cortex.d
+│   │           ├── stm32f3xx_hal_cortex.o
+│   │           ├── stm32f3xx_hal_cortex.su
+│   │           ├── stm32f3xx_hal.cyclo
+│   │           ├── stm32f3xx_hal.d
+│   │           ├── stm32f3xx_hal_dma.cyclo
+│   │           ├── stm32f3xx_hal_dma.d
+│   │           ├── stm32f3xx_hal_dma.o
+│   │           ├── stm32f3xx_hal_dma.su
+│   │           ├── stm32f3xx_hal_exti.cyclo
+│   │           ├── stm32f3xx_hal_exti.d
+│   │           ├── stm32f3xx_hal_exti.o
+│   │           ├── stm32f3xx_hal_exti.su
+│   │           ├── stm32f3xx_hal_flash.cyclo
+│   │           ├── stm32f3xx_hal_flash.d
+│   │           ├── stm32f3xx_hal_flash_ex.cyclo
+│   │           ├── stm32f3xx_hal_flash_ex.d
+│   │           ├── stm32f3xx_hal_flash_ex.o
+│   │           ├── stm32f3xx_hal_flash_ex.su
+│   │           ├── stm32f3xx_hal_flash.o
+│   │           ├── stm32f3xx_hal_flash.su
+│   │           ├── stm32f3xx_hal_gpio.cyclo
+│   │           ├── stm32f3xx_hal_gpio.d
+│   │           ├── stm32f3xx_hal_gpio.o
+│   │           ├── stm32f3xx_hal_gpio.su
+│   │           ├── stm32f3xx_hal_i2c.cyclo
+│   │           ├── stm32f3xx_hal_i2c.d
+│   │           ├── stm32f3xx_hal_i2c_ex.cyclo
+│   │           ├── stm32f3xx_hal_i2c_ex.d
+│   │           ├── stm32f3xx_hal_i2c_ex.o
+│   │           ├── stm32f3xx_hal_i2c_ex.su
+│   │           ├── stm32f3xx_hal_i2c.o
+│   │           ├── stm32f3xx_hal_i2c.su
+│   │           ├── stm32f3xx_hal.o
+│   │           ├── stm32f3xx_hal_pwr.cyclo
+│   │           ├── stm32f3xx_hal_pwr.d
+│   │           ├── stm32f3xx_hal_pwr_ex.cyclo
+│   │           ├── stm32f3xx_hal_pwr_ex.d
+│   │           ├── stm32f3xx_hal_pwr_ex.o
+│   │           ├── stm32f3xx_hal_pwr_ex.su
+│   │           ├── stm32f3xx_hal_pwr.o
+│   │           ├── stm32f3xx_hal_pwr.su
+│   │           ├── stm32f3xx_hal_rcc.cyclo
+│   │           ├── stm32f3xx_hal_rcc.d
+│   │           ├── stm32f3xx_hal_rcc_ex.cyclo
+│   │           ├── stm32f3xx_hal_rcc_ex.d
+│   │           ├── stm32f3xx_hal_rcc_ex.o
+│   │           ├── stm32f3xx_hal_rcc_ex.su
+│   │           ├── stm32f3xx_hal_rcc.o
+│   │           ├── stm32f3xx_hal_rcc.su
+│   │           ├── stm32f3xx_hal.su
+│   │           └── subdir.mk
+│   ├── makefile
+│   ├── objects.list
+│   ├── objects.mk
+│   └── sources.mk
+├── Drivers
+│   ├── CMSIS
+│   │   ├── Device
+│   │   │   └── ST
+│   │   │       └── STM32F3xx
+│   │   │           ├── Include
+│   │   │           │   ├── stm32f334x8.h
+│   │   │           │   ├── stm32f3xx.h
+│   │   │           │   └── system_stm32f3xx.h
+│   │   │           ├── LICENSE.txt
+│   │   │           └── Source
+│   │   │               └── Templates
+│   │   ├── Include
+│   │   │   ├── cmsis_armcc.h
+│   │   │   ├── cmsis_armclang.h
+│   │   │   ├── cmsis_compiler.h
+│   │   │   ├── cmsis_gcc.h
+│   │   │   ├── cmsis_iccarm.h
+│   │   │   ├── cmsis_version.h
+│   │   │   ├── core_armv8mbl.h
+│   │   │   ├── core_armv8mml.h
+│   │   │   ├── core_cm0.h
+│   │   │   ├── core_cm0plus.h
+│   │   │   ├── core_cm1.h
+│   │   │   ├── core_cm23.h
+│   │   │   ├── core_cm33.h
+│   │   │   ├── core_cm3.h
+│   │   │   ├── core_cm4.h
+│   │   │   ├── core_cm7.h
+│   │   │   ├── core_sc000.h
+│   │   │   ├── core_sc300.h
+│   │   │   ├── mpu_armv7.h
+│   │   │   ├── mpu_armv8.h
+│   │   │   └── tz_context.h
+│   │   └── LICENSE.txt
+│   └── STM32F3xx_HAL_Driver
+│       ├── Inc
+│       │   ├── Legacy
+│       │   │   └── stm32_hal_legacy.h
+│       │   ├── stm32f3xx_hal_cortex.h
+│       │   ├── stm32f3xx_hal_def.h
+│       │   ├── stm32f3xx_hal_dma_ex.h
+│       │   ├── stm32f3xx_hal_dma.h
+│       │   ├── stm32f3xx_hal_exti.h
+│       │   ├── stm32f3xx_hal_flash_ex.h
+│       │   ├── stm32f3xx_hal_flash.h
+│       │   ├── stm32f3xx_hal_gpio_ex.h
+│       │   ├── stm32f3xx_hal_gpio.h
+│       │   ├── stm32f3xx_hal.h
+│       │   ├── stm32f3xx_hal_i2c_ex.h
+│       │   ├── stm32f3xx_hal_i2c.h
+│       │   ├── stm32f3xx_hal_pwr_ex.h
+│       │   ├── stm32f3xx_hal_pwr.h
+│       │   ├── stm32f3xx_hal_rcc_ex.h
+│       │   ├── stm32f3xx_hal_rcc.h
+│       │   ├── stm32f3xx_ll_bus.h
+│       │   ├── stm32f3xx_ll_cortex.h
+│       │   ├── stm32f3xx_ll_dma.h
+│       │   ├── stm32f3xx_ll_exti.h
+│       │   ├── stm32f3xx_ll_gpio.h
+│       │   ├── stm32f3xx_ll_pwr.h
+│       │   ├── stm32f3xx_ll_rcc.h
+│       │   ├── stm32f3xx_ll_system.h
+│       │   └── stm32f3xx_ll_utils.h
+│       ├── LICENSE.txt
+│       └── Src
+│           ├── stm32f3xx_hal.c
+│           ├── stm32f3xx_hal_cortex.c
+│           ├── stm32f3xx_hal_dma.c
+│           ├── stm32f3xx_hal_exti.c
+│           ├── stm32f3xx_hal_flash.c
+│           ├── stm32f3xx_hal_flash_ex.c
+│           ├── stm32f3xx_hal_gpio.c
+│           ├── stm32f3xx_hal_i2c.c
+│           ├── stm32f3xx_hal_i2c_ex.c
+│           ├── stm32f3xx_hal_pwr.c
+│           ├── stm32f3xx_hal_pwr_ex.c
+│           ├── stm32f3xx_hal_rcc.c
+│           └── stm32f3xx_hal_rcc_ex.c
+└── STM32F334C8TX_FLASH.ld
+
+24 directories, 167 files
