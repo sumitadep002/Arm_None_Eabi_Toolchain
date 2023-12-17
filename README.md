@@ -20,7 +20,6 @@ Before using this build system, ensure you have the following prerequisites:
 
 Build
 To build the project, run the following command:
-```bash
 make
 
 Erase
