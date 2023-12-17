@@ -18,26 +18,21 @@ Before using this build system, ensure you have the following prerequisites:
 
 # Make Commands
 
-## Build
-
+Build
 To build the project, run the following command:
-
 ```bash
 make
 
 Erase
 To erase the flash memory of the microcontroller, use the following command:
-
 make erase
 
 Flash
 Flash the created binary into the microcontroller.
-
 make flash
 
 Clean
 To clean the workspace, use the following command:
-
 make clean
 
 
