@@ -12,31 +12,37 @@ For the time being it is only compatible with STM32F334xx series microcontroller
 Before using this build system, ensure you have the following prerequisites:
 
 
-- [arm-none-eabi-gcc](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm)
-- [ST-Link Utility](https://www.st.com/en/development-tools/st-link-utilities.html)
+- [arm-none-eabi-gcc](sudo apt-get install gcc-arm-none-eabi)
 
-## Building
+- [ST-Link Utility](sudo apt-get install stlink-tools)
+
+# Make Commands
+
+## Build
 
 To build the project, run the following command:
 
 ```bash
 make
 
-## Erase
-
+Erase
 To erase the flash memory of the microcontroller, use the following command:
 
-```bash
 make erase
 
-## flash
+Flash
+Flash the created binary into the microcontroller.
 
-Flash the created binary into microcontroller
-
-```bash
 make flash
 
-## clean
+Clean
+To clean the workspace, use the following command:
 
-To clean the workspace:
 make clean
+
+
+These commands are designed to simplify the development process for your STM32 project. Adjust the Makefile and configurations as needed for your specific microcontroller and project requirements.
+
+Feel free to explore and modify the Makefile to suit your preferences and project structure. If you encounter any issues or have suggestions for improvement, contributions are welcome.
+
+
