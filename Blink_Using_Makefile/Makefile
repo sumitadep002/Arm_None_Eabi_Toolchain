@@ -28,7 +28,3 @@ flash:	$(BIN)
 
 erase:
 	st-flash erase
-	
-size: $(ELF)
-	arm-none-eabi-size $(ELF)
-	
