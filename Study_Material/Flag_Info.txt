@@ -1,0 +1,39 @@
+explaination of various flags used along with arm-none-eabi-gcc
+
+1) -mcpu=cortex-m4
+To specify CPU present in microcontroller
+
+2) --specs=nano.specs
+The --specs=nosys.specs option is used with the GCC (GNU Compiler Collection) to specify a set of specifications that affect the linking process
+
+it affects the runtime environment and system calls. It essentially tells the linker to use specifications that assume the absence of a full operating system.
+
+3)-mthumb
+It is mode which allows processor to operate on 16 bit instruction set
+
+4)--gc-sections -static --specs=nano.specs
+
+--gc-sections:
+
+This option tells the linker to garbage collect unused sections from the final binary. In embedded systems, where code and data size are critical, removing unused sections helps minimize the size of the compiled binary. This is particularly useful for avoiding unnecessary code and data in the final executabl
+
+-static:
+
+This option instructs the linker to use static linking instead of dynamic linking. In embedded systems, static linking is common because it allows the linker to include only the necessary code and data directly into the final executable. Dynamic linking, on the other hand, involves resolving symbols at runtime, which may not be suitable for resource-constrained environments.
+
+--specs=nano.specs:
+
+This option specifies the use of Nano specifications for small implementations. The Nano specifications include a set of settings and optimizations aimed at reducing code size. It is particularly relevant for embedded systems where minimizing code size is crucial.
+
+4)-mfpu=fpv4-sp-d16
+fpv4-sp-d16 indicates the use of a single-precision (32-bit) floating-point unit with 16 double-precision (64-bit) registers.
+fpv4 refers to the ARM Architecture version 4 FPU.
+
+5)-mfloat-abi=hard:
+
+This option specifies the floating-point ABI (Application Binary Interface). The hard ABI indicates that floating-point calculations should use hardware floating-point instructions and registers.
+In contrast, the soft ABI would mean that floating-point operations are emulated in software, which is less efficient but more compatible with systems that lack hardware floating-point support.
+
+
+NOTE: It very much advisable to use above specified flags along with build process
+Otherwise size of executable will be unusual.
